@@ -1,0 +1,1751 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The CyberDrain Improved Partner Portal is a portal to help manage administration for Microsoft Partners. The current Microsoft partner landscape makes it fairly hard to manage multi tenant situations, with loads of manual work. Microsoft Lighthouse might resolve this in the future but development of this is lagging far behind development of the current market for Microsoft Partners.">
+      
+      
+      
+        <meta name="author" content="Kelvin Tegelaar">
+      
+      
+      <link rel="icon" href="../images/CyberDrainWhite.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>Installation - CyberDrain Improved Partner Portal (CIPP)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/timeago.css">
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prerequisites" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="CyberDrain Improved Partner Portal (CIPP)" class="md-header__button md-logo" aria-label="CyberDrain Improved Partner Portal (CIPP)" data-md-component="logo">
+      
+  <img src="../images/CyberDrainIconOrangeWhite.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CyberDrain Improved Partner Portal (CIPP)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/KelvinTegelaar/CIPP/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KelvinTegelaar/CIPP
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="Installation.html" class="md-tabs__link md-tabs__link--active">
+        Getting Started
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../IdentityManagement/Users.html" class="md-tabs__link">
+        Identity Management
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../TenantAdministration/Tenants.html" class="md-tabs__link">
+        Tenant Administration
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../EndpointManagement/Applications.html" class="md-tabs__link">
+        Endpoint Management
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../OneDriveTeamsSharepoint/OneDrive.html" class="md-tabs__link">
+        OneDrive, Sharepoint and Teams
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../CIPPSettings/ConfigurationSettings.html" class="md-tabs__link">
+        CIPP Settings
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="CyberDrain Improved Partner Portal (CIPP)" class="md-nav__button md-logo" aria-label="CyberDrain Improved Partner Portal (CIPP)" data-md-component="logo">
+      
+  <img src="../images/CyberDrainIconOrangeWhite.png" alt="logo">
+
+    </a>
+    CyberDrain Improved Partner Portal (CIPP)
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/KelvinTegelaar/CIPP/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    KelvinTegelaar/CIPP
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Getting Started
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Installation.html" class="md-nav__link md-nav__link--active">
+        Installation
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+    <nav class="md-nav" aria-label="Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delegated-permissions" class="md-nav__link">
+    Delegated Permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-permissions" class="md-nav__link">
+    Application Permissions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-installation" class="md-nav__link">
+    Automated Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-cant-deploy-in-my-region" class="md-nav__link">
+    I can't deploy in my region
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manual-instructions" class="md-nav__link">
+    Manual Instructions
+  </a>
+  
+    <nav class="md-nav" aria-label="Manual Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-azure-function-host" class="md-nav__link">
+    Create an Azure Function host
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-azure-key-vault" class="md-nav__link">
+    Create an Azure Key Vault
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-an-azure-static-web-app" class="md-nav__link">
+    Create an Azure Static Web App
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-custom-domain-name" class="md-nav__link">
+    Adding a custom domain name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-users-to-cipp" class="md-nav__link">
+    Adding users to CIPP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#its-not-working-im-having-issues" class="md-nav__link">
+    It's not working, I'm having issues
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Roles.html" class="md-nav__link">
+        Roles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="FAQ.html" class="md-nav__link">
+        Frequently Asked Questions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Security.html" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Updating.html" class="md-nav__link">
+        Updating
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Changelog.html" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Contributions.html" class="md-nav__link">
+        Contributions
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Identity Management
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Identity Management" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Identity Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IdentityManagement/Users.html" class="md-nav__link">
+        Users
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IdentityManagement/Groups.html" class="md-nav__link">
+        Groups
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Tenant Administration
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tenant Administration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tenant Administration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TenantAdministration/Tenants.html" class="md-nav__link">
+        Tenants
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TenantAdministration/Standards.html" class="md-nav__link">
+        Standards
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TenantAdministration/BestPracticesAnalyser.html" class="md-nav__link">
+        Best Practices Analyser
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TenantAdministration/DomainAnalyser.html" class="md-nav__link">
+        Domain Analyser
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Endpoint Management
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Endpoint Management" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Endpoint Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EndpointManagement/Applications.html" class="md-nav__link">
+        Applications
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EndpointManagement/AddChocoApp.html" class="md-nav__link">
+        Add Choco App
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EndpointManagement/AutopilotDevices.html" class="md-nav__link">
+        Autopilot Devices
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EndpointManagement/AutopilotProfiles.html" class="md-nav__link">
+        Autopilot Profiles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EndpointManagement/AutopilotStatusPage.html" class="md-nav__link">
+        Autopilot Status Page
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EndpointManagement/IntunePolicyTemplates.html" class="md-nav__link">
+        Intune Policy Templates
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        OneDrive, Sharepoint and Teams
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="OneDrive, Sharepoint and Teams" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          OneDrive, Sharepoint and Teams
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OneDriveTeamsSharepoint/OneDrive.html" class="md-nav__link">
+        OneDrive
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        CIPP Settings
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="CIPP Settings" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          CIPP Settings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIPPSettings/ConfigurationSettings.html" class="md-nav__link">
+        Configuration Settings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CIPPSettings/BackendAccess.html" class="md-nav__link">
+        Backend Access
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/KelvinTegelaar/CIPP/edit/master/Documentation/GettingStarted/Installation.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Installation</h1>
+                
+                <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>For the installation and maintenance, we assume you have some knowledge of GitHub (or Git in general), and have setup the Secure Application Model prior to install. </p>
+<ul>
+<li>Haven't setup the Secure Application model yet? Check out <a href="https://www.cyberdrain.com/connect-to-exchange-online-automated-when-mfa-is-enabled-using-the-secureapp-model/">this CyberDrain blog post</a>. </li>
+<li>For a step-by-step guide to setting up the Secure Application Model, see <a href="https://www.gavsto.com/secure-application-model-for-the-layman-and-step-by-step/">this Gavsto blog post</a>.</li>
+</ul>
+<details class="tip"><summary>Just the code.</summary><p>If you're just looking for the SAM script - you can find it below:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c"># Fill these in with the details of your Azure AD application.</span>
+<span class="nv">$ApplicationID</span> <span class="p">=</span> <span class="s1">&#39;ApplicationID&#39;</span>
+<span class="nv">$ApplicationSecret</span> <span class="p">=</span> <span class="s1">&#39;Secret&#39;</span> <span class="p">|</span> <span class="nb">Convertto-SecureString</span> <span class="n">-AsPlainText</span> <span class="n">-Force</span>
+<span class="nv">$TenantID</span> <span class="p">=</span> <span class="s1">&#39;YourTenantID&#39;</span>
+<span class="c"># You don&#39;t need to change anything below here.</span>
+<span class="nv">$Credential</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Management</span><span class="p">.</span><span class="n">Automation</span><span class="p">.</span><span class="n">PSCredential</span><span class="p">(</span><span class="nv">$ApplicationId</span><span class="p">,</span> <span class="nv">$ApplicationSecret</span><span class="p">)</span>
+<span class="nv">$token</span> <span class="p">=</span> <span class="nb">New-PartnerAccessToken</span> <span class="n">-ApplicationId</span> <span class="nv">$ApplicationID</span> <span class="n">-Scopes</span> <span class="s1">&#39;https://api.partnercenter.microsoft.com/user_impersonation&#39;</span> <span class="n">-ServicePrincipal</span> <span class="n">-Credential</span> <span class="nv">$Credential</span> <span class="n">-Tenant</span> <span class="nv">$TenantID</span> <span class="n">-UseAuthorizationCode</span>
+<span class="nv">$Exchangetoken</span> <span class="p">=</span> <span class="nb">New-PartnerAccessToken</span> <span class="n">-ApplicationId</span> <span class="s1">&#39;a0c73c16-a7e3-4564-9a95-2bdf47383716&#39;</span> <span class="n">-Scopes</span> <span class="s1">&#39;https://outlook.office365.com/.default&#39;</span> <span class="n">-Tenant</span> <span class="nv">$TenantID</span> <span class="n">-UseDeviceAuthentication</span>
+<span class="nb">Write-Host</span> <span class="s2">&quot;================ Secrets ================&quot;</span>
+<span class="nb">Write-Host</span> <span class="s2">&quot;</span><span class="se">`$</span><span class="s2">ApplicationID         = </span><span class="p">$(</span><span class="nv">$ApplicationID</span><span class="p">)</span><span class="s2">&quot;</span>
+<span class="nb">Write-Host</span> <span class="s2">&quot;</span><span class="se">`$</span><span class="s2">ApplicationSecret     = </span><span class="p">$(</span><span class="nv">$ApplicationSecret</span><span class="p">)</span><span class="s2">&quot;</span>
+<span class="nb">Write-Host</span> <span class="s2">&quot;</span><span class="se">`$</span><span class="s2">TenantID              = </span><span class="p">$(</span><span class="nv">$TenantID</span><span class="p">)</span><span class="s2">&quot;</span>
+<span class="nb">Write-Host</span> <span class="s2">&quot;</span><span class="se">`$</span><span class="s2">RefreshToken          = </span><span class="p">$(</span><span class="nv">$token</span><span class="p">.</span><span class="n">RefreshToken</span><span class="p">)</span><span class="s2">&quot;</span> <span class="n">-ForegroundColor</span> <span class="n">Blue</span>
+<span class="nb">Write-Host</span> <span class="s2">&quot;</span><span class="se">`$</span><span class="s2">ExchangeRefreshToken  = </span><span class="p">$(</span><span class="nv">$ExchangeToken</span><span class="p">.</span><span class="n">Refreshtoken</span><span class="p">)</span><span class="s2">&quot;</span> <span class="n">-ForegroundColor</span> <span class="n">Green</span>
+<span class="nb">Write-Host</span> <span class="s2">&quot;================ Secrets ================&quot;</span>
+<span class="nb">Write-Host</span> <span class="s2">&quot;    SAVE THESE IN A SECURE LOCATION     &quot;</span>
+</code></pre></div>
+</td></tr></table>
+</details>
+<p>You'll also need the following permissions for your secure application model, to add permissions follow these instructions:</p>
+<ul>
+<li>Go to the <a href="https://portal.azure.com">Azure Portal</a>.</li>
+<li>Click on <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview"><strong>Azure Active Directory</strong></a>, now click on <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps"><strong>App Registrations</strong></a>.</li>
+<li>Find your Secure App Model application. You can search based on the Application ID.</li>
+<li>Go to <strong>API Permissions</strong> and click <strong>Add a permission</strong>.</li>
+<li>Choose “Microsoft Graph” and “Delegated permission” or "Application Permissions"</li>
+<li>Add the permission you need</li>
+<li>Finally, click on “Grant Admin Consent” for Company Name.</li>
+</ul>
+<h2 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h2>
+<p>For full functionality, you'll need the following permissions for your Secure Application Model. You can remove any permissions if you do not want the application to be able to use that functionality.</p>
+<div class="admonition info">
+<p class="admonition-title">Duplicate Permissions</p>
+<p>Some permissions may appear to be duplicated in the Delegated and Application permissions tables below. This is <em>by design</em> and you do need to add both permissions!</p>
+</div>
+<h3 id="delegated-permissions">Delegated Permissions<a class="headerlink" href="#delegated-permissions" title="Permanent link">&para;</a></h3>
+<p>You'll need to add the following <strong>Delegated permissions</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>API / Permissions name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application.Read.All</td>
+<td>Read applications</td>
+</tr>
+<tr>
+<td>Application.ReadWrite.All</td>
+<td>Read and write all applications</td>
+</tr>
+<tr>
+<td>AuditLog.Read.All</td>
+<td>Read audit log data</td>
+</tr>
+<tr>
+<td>Channel.Create</td>
+<td>Create channels</td>
+</tr>
+<tr>
+<td>Channel.ReadBasic.All</td>
+<td>Read the names and descriptions of channels</td>
+</tr>
+<tr>
+<td>ChannelMember.Read.All</td>
+<td>Read the members of channels</td>
+</tr>
+<tr>
+<td>ChannelMember.ReadWrite.All</td>
+<td>Add and remove members from channels</td>
+</tr>
+<tr>
+<td>ChannelMessage.Delete</td>
+<td>Delete users' channel messages</td>
+</tr>
+<tr>
+<td>ChannelMessage.Edit</td>
+<td>Edit users' channel messages</td>
+</tr>
+<tr>
+<td>ChannelMessage.Read.All</td>
+<td>Read users' channel messages</td>
+</tr>
+<tr>
+<td>ChannelMessage.Send</td>
+<td>Send channel messages</td>
+</tr>
+<tr>
+<td>ChannelSettings.Read.All</td>
+<td>Read the names, descriptions, and settings of channels</td>
+</tr>
+<tr>
+<td>ChannelSettings.ReadWrite.All</td>
+<td>Read and write the names, descriptions, and settings of channels</td>
+</tr>
+<tr>
+<td>ConsentRequest.Read.All</td>
+<td>Read consent requests</td>
+</tr>
+<tr>
+<td>Device.Command</td>
+<td>Communicate with user devices</td>
+</tr>
+<tr>
+<td>Device.Read</td>
+<td>Read user devices</td>
+</tr>
+<tr>
+<td>Device.Read.All</td>
+<td>Read all devices</td>
+</tr>
+<tr>
+<td>DeviceManagementApps.ReadWrite.All</td>
+<td>Read and write Microsoft Intune apps</td>
+</tr>
+<tr>
+<td>DeviceManagementConfiguration.ReadWrite.All</td>
+<td>Read and write Microsoft Intune Device Configuration and Policies</td>
+</tr>
+<tr>
+<td>DeviceManagementManagedDevices.ReadWrite.All</td>
+<td>Read and write Microsoft Intune devices</td>
+</tr>
+<tr>
+<td>DeviceManagementRBAC.ReadWrite.All</td>
+<td>Read and write Microsoft Intune RBAC settings</td>
+</tr>
+<tr>
+<td>DeviceManagementServiceConfig.ReadWrite.All</td>
+<td>Read and write Microsoft Intune configuration</td>
+</tr>
+<tr>
+<td>Directory.AccessAsUser.All</td>
+<td>Access directory as the signed in user</td>
+</tr>
+<tr>
+<td>Domain.Read.All</td>
+<td>Read domain data</td>
+</tr>
+<tr>
+<td>Group.ReadWrite.All</td>
+<td>Read and write all groups</td>
+</tr>
+<tr>
+<td>GroupMember.ReadWrite.All</td>
+<td>Read and write group memberships</td>
+</tr>
+<tr>
+<td>Mail.Send</td>
+<td>Send mail as a user</td>
+</tr>
+<tr>
+<td>Mail.Send.Shared</td>
+<td>Send mail on behalf of others</td>
+</tr>
+<tr>
+<td>Member.Read.Hidden</td>
+<td>Read hidden memberships</td>
+</tr>
+<tr>
+<td>Organization.ReadWrite.All</td>
+<td>Read and write organization information</td>
+</tr>
+<tr>
+<td>Policy.Read.All</td>
+<td>Read your organization's policies</td>
+</tr>
+<tr>
+<td>Policy.ReadWrite.AuthenticationFlows</td>
+<td>Read and write authentication flow policies</td>
+</tr>
+<tr>
+<td>Policy.ReadWrite.AuthenticationMethod</td>
+<td>Read and write authentication method policies</td>
+</tr>
+<tr>
+<td>Policy.ReadWrite.Authorization</td>
+<td>Read and write your organization's authorization policy</td>
+</tr>
+<tr>
+<td>Policy.ReadWrite.ConsentRequest</td>
+<td>Read and write consent request policy</td>
+</tr>
+<tr>
+<td>Policy.ReadWrite.ConditionalAccess</td>
+<td>Read and write conditional access policy</td>
+</tr>
+<tr>
+<td>Policy.ReadWrite.DeviceConfiguration</td>
+<td>Read and write your organization's device configuration policies</td>
+</tr>
+<tr>
+<td>PrivilegedAccess.Read.AzureResources</td>
+<td>Read privileged access to Azure resources</td>
+</tr>
+<tr>
+<td>PrivilegedAccess.ReadWrite.AzureResources</td>
+<td>Read and write privileged access to Azure resources</td>
+</tr>
+<tr>
+<td>OpenID permissions - profile</td>
+<td>View users' basic profile</td>
+</tr>
+<tr>
+<td>Reports.Read.All</td>
+<td>Read all usage reports</td>
+</tr>
+<tr>
+<td>RoleManagement.ReadWrite.Directory</td>
+<td>Read and write directory RBAC settings</td>
+</tr>
+<tr>
+<td>SecurityActions.ReadWrite.All</td>
+<td>Read and update your organization's security actions</td>
+</tr>
+<tr>
+<td>SecurityEvents.ReadWrite.All</td>
+<td>Read and update your organization’s security events</td>
+</tr>
+<tr>
+<td>ServiceHealth.Read.All</td>
+<td>Read service health</td>
+</tr>
+<tr>
+<td>ServiceMessage.Read.All</td>
+<td>Read service announcement messages</td>
+</tr>
+<tr>
+<td>Sites.ReadWrite.All</td>
+<td>Edit or delete items in all site collections</td>
+</tr>
+<tr>
+<td>TeamMember.ReadWrite.All</td>
+<td>Add and remove members from teams</td>
+</tr>
+<tr>
+<td>TeamMember.ReadWriteNonOwnerRole.All</td>
+<td>Add and remove members with non-owner role for all teams</td>
+</tr>
+<tr>
+<td>TeamsActivity.Read</td>
+<td>Read users' teamwork activity feed</td>
+</tr>
+<tr>
+<td>TeamsActivity.Send</td>
+<td>Send a teamwork activity as the user</td>
+</tr>
+<tr>
+<td>TeamsApp.Read</td>
+<td>Read users' installed Teams apps</td>
+</tr>
+<tr>
+<td>TeamsApp.Read.All</td>
+<td>Read all installed Teams apps</td>
+</tr>
+<tr>
+<td>TeamsApp.ReadWrite</td>
+<td>Manage users' Teams apps</td>
+</tr>
+<tr>
+<td>TeamsApp.ReadWrite.All</td>
+<td>Manage all Teams apps</td>
+</tr>
+<tr>
+<td>TeamsAppInstallation.ReadForChat</td>
+<td>Read installed Teams apps in chats</td>
+</tr>
+<tr>
+<td>TeamsAppInstallation.ReadForTeam</td>
+<td>Read installed Teams apps in teams</td>
+</tr>
+<tr>
+<td>TeamsAppInstallation.ReadForUser</td>
+<td>Read users' installed Teams apps</td>
+</tr>
+<tr>
+<td>TeamsAppInstallation.ReadWriteForChat</td>
+<td>Manage installed Teams apps in chats</td>
+</tr>
+<tr>
+<td>TeamsAppInstallation.ReadWriteForTeam</td>
+<td>Manage installed Teams apps in teams</td>
+</tr>
+<tr>
+<td>TeamsAppInstallation.ReadWriteForUser</td>
+<td>Manage users' installed Teams apps</td>
+</tr>
+<tr>
+<td>TeamsAppInstallation.ReadWriteSelfForChat</td>
+<td>Allow the Teams app to manage itself in chats</td>
+</tr>
+<tr>
+<td>TeamsAppInstallation.ReadWriteSelfForTeam</td>
+<td>Allow the app to manage itself in teams</td>
+</tr>
+<tr>
+<td>TeamsAppInstallation.ReadWriteSelfForUser</td>
+<td>Allow the Teams app to manage itself for a user</td>
+</tr>
+<tr>
+<td>TeamSettings.Read.All</td>
+<td>Read teams' settings</td>
+</tr>
+<tr>
+<td>TeamSettings.ReadWrite.All</td>
+<td>Read and change teams' settings</td>
+</tr>
+<tr>
+<td>TeamsTab.Create</td>
+<td>Create tabs in Microsoft Teams</td>
+</tr>
+<tr>
+<td>TeamsTab.Read.All</td>
+<td>Read tabs in Microsoft Teams</td>
+</tr>
+<tr>
+<td>TeamsTab.ReadWrite.All</td>
+<td>Read and write tabs in Microsoft Teams</td>
+</tr>
+<tr>
+<td>TeamsTab.ReadWriteForChat</td>
+<td>Allow the Teams app to manage all tabs in chats</td>
+</tr>
+<tr>
+<td>TeamsTab.ReadWriteForTeam</td>
+<td>Allow the Teams app to manage all tabs in teams</td>
+</tr>
+<tr>
+<td>TeamsTab.ReadWriteForUser</td>
+<td>Allow the Teams app to manage all tabs for a user</td>
+</tr>
+<tr>
+<td>Team.Create</td>
+<td>Create teams</td>
+</tr>
+<tr>
+<td>Team.ReadBasic.All</td>
+<td>Read the names and descriptions of teams</td>
+</tr>
+<tr>
+<td>ThreatAssessment.ReadWrite.All</td>
+<td>Read and write threat assessment requests</td>
+</tr>
+<tr>
+<td>UnifiedGroupMember.Read.AsGuest</td>
+<td>Read unified group memberships as guest</td>
+</tr>
+<tr>
+<td>User.ManageIdentities.All</td>
+<td>Manage user identities</td>
+</tr>
+<tr>
+<td>User.Read</td>
+<td>Sign in and read user profile</td>
+</tr>
+<tr>
+<td>User.ReadWrite.All</td>
+<td>Read and write all users' full profiles</td>
+</tr>
+<tr>
+<td>UserAuthenticationMethod.Read.All</td>
+<td>Read all users' authentication methods</td>
+</tr>
+<tr>
+<td>UserAuthenticationMethod.ReadWrite</td>
+<td>Read and write user authentication methods</td>
+</tr>
+<tr>
+<td>UserAuthenticationMethod.ReadWrite.All</td>
+<td>Read and write all users' authentication methods</td>
+</tr>
+</tbody>
+</table>
+<h3 id="application-permissions">Application Permissions<a class="headerlink" href="#application-permissions" title="Permanent link">&para;</a></h3>
+<p>You'll need to add the following <strong>Application permissions</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>API / Permissions name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Channel.Create</td>
+<td>Create channels</td>
+</tr>
+<tr>
+<td>Channel.ReadBasic.All</td>
+<td>Read the names and descriptions of channels</td>
+</tr>
+<tr>
+<td>ChannelMember.Read.All</td>
+<td>Read the members of channels</td>
+</tr>
+<tr>
+<td>ChannelMember.ReadWrite.All</td>
+<td>Add and remove members from channels</td>
+</tr>
+<tr>
+<td>Device.ReadWrite.All</td>
+<td>Read and write devices</td>
+</tr>
+<tr>
+<td>DeviceManagementApps.ReadWrite.All</td>
+<td>Read and write Microsoft Intune apps</td>
+</tr>
+<tr>
+<td>DeviceManagementConfiguration.ReadWrite.All</td>
+<td>Read and write Microsoft Intune Device Configuration and Policies</td>
+</tr>
+<tr>
+<td>DeviceManagementManagedDevices.PrivilegedOperations.All</td>
+<td>Perform user-impacting remote actions on Microsoft Intune devices</td>
+</tr>
+<tr>
+<td>DeviceManagementManagedDevices.Read.All</td>
+<td>Read Microsoft Intune devices</td>
+</tr>
+<tr>
+<td>DeviceManagementManagedDevices.ReadWrite.All</td>
+<td>Read and write Microsoft Intune devices</td>
+</tr>
+<tr>
+<td>DeviceManagementRBAC.Read.All</td>
+<td>Read Microsoft Intune RBAC settings</td>
+</tr>
+<tr>
+<td>DeviceManagementRBAC.ReadWrite.All</td>
+<td>Read and write Microsoft Intune RBAC settings</td>
+</tr>
+<tr>
+<td>DeviceManagementServiceConfig.Read.All</td>
+<td>Read Microsoft Intune configuration</td>
+</tr>
+<tr>
+<td>DeviceManagementServiceConfig.ReadWrite.All</td>
+<td>Read and write Microsoft Intune configuration</td>
+</tr>
+<tr>
+<td>Directory.Read.All</td>
+<td>Read directory data</td>
+</tr>
+<tr>
+<td>Group.Create</td>
+<td>Create groups</td>
+</tr>
+<tr>
+<td>Group.Read.All</td>
+<td>Read all groups</td>
+</tr>
+<tr>
+<td>Group.ReadWrite.All</td>
+<td>Read and write all groups</td>
+</tr>
+<tr>
+<td>GroupMember.ReadWrite.All</td>
+<td>Read and write group memberships</td>
+</tr>
+<tr>
+<td>Mail.Send</td>
+<td>Send mail as a user</td>
+</tr>
+<tr>
+<td>Organization.ReadWrite.All</td>
+<td>Read and write organization information</td>
+</tr>
+<tr>
+<td>Policy.Read.All</td>
+<td>Read your organization's policies</td>
+</tr>
+<tr>
+<td>Policy.ReadWrite.AuthenticationFlows</td>
+<td>Read and write authentication flow policies</td>
+</tr>
+<tr>
+<td>Policy.ReadWrite.AuthenticationMethod</td>
+<td>Read and write authentication method policies</td>
+</tr>
+<tr>
+<td>Policy.ReadWrite.ConsentRequest</td>
+<td>Read and write consent request policy</td>
+</tr>
+<tr>
+<td>Policy.ReadWrite.ConditionalAccess</td>
+<td>Read and write conditional access policy</td>
+</tr>
+<tr>
+<td>PrivilegedAccess.ReadWrite.AzureADGroup</td>
+<td>Read and write privileged access to Azure AD groups</td>
+</tr>
+<tr>
+<td>Reports.Read.All</td>
+<td>Read all usage reports</td>
+</tr>
+<tr>
+<td>RoleManagement.ReadWrite.Directory</td>
+<td>Read and write directory RBAC settings</td>
+</tr>
+<tr>
+<td>SecurityEvents.Read.All</td>
+<td>Read your organization’s security events</td>
+</tr>
+<tr>
+<td>Sites.FullControl.All</td>
+<td>Have full control of all site collections</td>
+</tr>
+<tr>
+<td>Team.ReadBasic.All</td>
+<td>Read the names and descriptions of teams</td>
+</tr>
+<tr>
+<td>TeamMember.ReadWrite.All</td>
+<td>Add and remove members from teams</td>
+</tr>
+<tr>
+<td>TeamMember.ReadWriteNonOwnerRole.All</td>
+<td>Add and remove members with non-owner role for all teams</td>
+</tr>
+<tr>
+<td>User.ReadWrite.All</td>
+<td>Read and write all users' full profiles</td>
+</tr>
+<tr>
+<td>UserAuthenticationMethod.ReadWrite.All</td>
+<td>Read and write all users' authentication methods</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>You'll need the following to get started;</p>
+<ul>
+<li>Your Secure Application Model information</li>
+<li>A fork of <a href="https://github.com/KelvinTegelaar/CIPP">the CIPP GitHub</a> repository.</li>
+<li>A fork of <a href="https://github.com/KelvinTegelaar/CIPP-API">the CIPP API GitHub</a> repository.</li>
+<li>An active Azure Subscription.</li>
+<li>A GitHub Personal Access Token. You can find instructions on what you need and the minimum permissions to do this <a href="https://docs.microsoft.com/en-us/azure/static-web-apps/publish-azure-resource-manager?tabs=azure-cli#create-a-github-personal-access-token">in Microsoft's Azure Static Web Apps documentation</a>. You only need to follow the "Create a GitHub Personal Access Token" section.</li>
+</ul>
+<h2 id="automated-installation">Automated Installation<a class="headerlink" href="#automated-installation" title="Permanent link">&para;</a></h2>
+<p>After you have completed the requirements in the <a href="#getting-started">Getting Started</a> section, click the button below to run the automated setup. This does most of the work for you. If you don't want to use the automated installer, use the <a href="#manual-installation">manual installation instructions</a> below, but be warned that this is really not advised, there's a lot of moving parts where one could make a mistake. You will need to use the manual installation instructions if you wish to host your repo in <a href="https://dev.azure.com">Azure DevOps</a> or on a <a href="https://www.gitlab.com">GitLab</a> instance.</p>
+<p><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKelvinTegelaar%2FCIPP%2Fmaster%2FDocumentation%2FAzureDeploymentTemplate.json"><img alt="Deploy To Azure" src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true" /></a></p>
+<p>For the first 20 minutes the application is expected to respond pretty slowly, this is because the Function App (CIPP-API) has to download PowerShell modules from Microsoft. We can't make this run any faster at this time.</p>
+<p>To update CIPP to a new version see the <a href="updating.md">updating</a> section of this documentation.</p>
+<h3 id="i-cant-deploy-in-my-region">I can't deploy in my region<a class="headerlink" href="#i-cant-deploy-in-my-region" title="Permanent link">&para;</a></h3>
+<p>This is most likely because of the Azure Static Web Apps component. This component is global by default (it picks the datacenter closest to you) but some regions don't allow deployment. Use the alternative installation button below. This will deploy in Central US; but the app will still be located in your nearest datacenter so you won't notice any latency.</p>
+<p><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FKelvinTegelaar%2FCIPP%2Fmaster%2FDocumentation%2FAzureDeploymentTemplate_regionoptions.json"><img alt="Deploy To Azure" src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true" /></a></p>
+<h2 id="manual-instructions">Manual Instructions<a class="headerlink" href="#manual-instructions" title="Permanent link">&para;</a></h2>
+<p>If you don't want to, or can't, install CIPP automatically you can use the following steps to create the required Azure services manually.</p>
+<h3 id="create-an-azure-function-host">Create an Azure Function host<a class="headerlink" href="#create-an-azure-function-host" title="Permanent link">&para;</a></h3>
+<p>Create an Azure Function App and upload the data from the CIPP-API to the Azure Function, or attach it to your fork. Each time we update the central repository you must also update your fork to keep current. </p>
+<p>After creating the Azure function, Enable system managed identity for the Azure Function. <a href="https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?toc=%2Fazure%2Fazure-functions%2Ftoc.json&amp;tabs=powershell">Microsoft Docs - How to use managed identities for App Service and Azure Functions</a></p>
+<p>Give the managed identity "Reader" access on the Azure Subscription. <a href="https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal-managed-identity">Microsoft Docs - Assign Azure Roles to a managed identity</a></p>
+<h3 id="create-an-azure-key-vault">Create an Azure Key Vault<a class="headerlink" href="#create-an-azure-key-vault" title="Permanent link">&para;</a></h3>
+<p>Create an Azure Key Vault and give the system managed identity access to update, read, and create Secrets. This keyvault will be used to store credentials and tokens for the application. <a href="https://docs.microsoft.com/en-us/azure/key-vault/general/assign-access-policy?tabs=azure-portal">Microsoft Docs - Assign a Key Vault access policy</a></p>
+<h3 id="create-an-azure-static-web-app">Create an Azure Static Web App<a class="headerlink" href="#create-an-azure-static-web-app" title="Permanent link">&para;</a></h3>
+<p>Create a premium Azure Static Web App in the Azure portal and use the CIPP repository fork you've made as the source. Each time an update is executed you must pull the latest changes into your fork and push (deploy) these to the Static Web App. This deployment can be automated with GitHub Actions, Azure DevOps Pipelines or GitLab CI/CD (and/or other CI/CD tools).</p>
+<p>After creation, perform the following changes:</p>
+<ul>
+<li>Attach the Function App to the Static Web App. <a href="https://docs.microsoft.com/en-us/azure/static-web-apps/functions-bring-your-own">Microsoft Docs - Bring your own functions to Azure Static Web Apps</a></li>
+</ul>
+<h2 id="adding-a-custom-domain-name">Adding a custom domain name<a class="headerlink" href="#adding-a-custom-domain-name" title="Permanent link">&para;</a></h2>
+<p>At the moment of deployment, the application will use a randomly generated name. To change this, go to your Resource Group in Azure, click on your Static Web App (<code>cipp-swa-xxxx</code> if using automatic deployment) and click on Custom Domains. You'll be able to add your own domain name here. <a href="https://docs.microsoft.com/en-us/azure/static-web-apps/custom-domain?tabs=azure-dns">Microsoft Docs - Set up a custom domain with free certificate in Azure Static Web Apps</a></p>
+<h2 id="adding-users-to-cipp">Adding users to CIPP<a class="headerlink" href="#adding-users-to-cipp" title="Permanent link">&para;</a></h2>
+<p>After deployment, go to your resource group in Azure and click on your Static Web App (<code>cipp-swa-xxxx</code> if using automatic deployment). Click on Role Management and invite the users you want. Currently we support three roles, <code>reader</code>, <code>editor</code>, and <code>admin</code>. More info about the roles can be found on the <a href="Roles.html">Roles</a> page.</p>
+<p>You should now be able to browse to the custom domain or the default domain, and use the CIPP control panel. You should probably allow 30 minutes to an hour after deploying for everything to work.</p>
+<h2 id="its-not-working-im-having-issues">It's not working, I'm having issues<a class="headerlink" href="#its-not-working-im-having-issues" title="Permanent link">&para;</a></h2>
+<p>Before you create an issue, please restart the Azure Function host, this solves 99,9% of all issues. Turn it off, turn it on again. ;)</p>
+<p>If that hasn't worked check out the <a href="FAQ.html">FAQ</a> page and if needed - create an issue <a href="https://github.com/KelvinTegelaar/CIPP">on GitHub</a> or seek help <a href="https://discord.gg/kYgsfrX2">on Discord</a></p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-11-18T16:22:12+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-11-18</span>
+      
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" title="Back to top" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+          </a>
+        
+      </main>
+      
+        <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    <nav
+      class="md-footer__inner md-grid"
+      aria-label="Footer"
+    >
+
+      <!-- Link to previous page -->
+      
+        
+        <a
+          href="../index.html"
+          class="md-footer__link md-footer__link--prev"
+          aria-label="Previous: Home"
+          rel="prev"
+        >
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+
+      <!-- Link to next page -->
+      
+        
+        <a
+          href="Roles.html"
+          class="md-footer__link md-footer__link--next"
+          aria-label="Next: Roles"
+          rel="next"
+        >
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Roles
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+
+  <div class="md-footer-meta md-typeset">
+    <p class= "md-footer-sponsorintro" align="center">Sponsored by:</p>
+    <div class="md-footer-sponsors">
+      <a href="https://oit.co/"><img src="../images/sponsors/OIT.webp" alt="OIT" style="max-height: 75px;"/></a>
+      <a href="https://www.genuinetechnology.com/"><img src="../images/sponsors/GenuineTechnologyGroup.png" alt="Genuine Technology Group" style="max-height: 75px;" /></a>
+      <a href="https://www.ninjaone.com"><img src="../images/sponsors/NinjaOne.png" alt="NinjaOne" style="max-height: 75px;" /></a>
+    </div>
+  </div>
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 CyberDrain
+          </div>
+        
+        
+          Made with
+          <a
+            href="https://squidfunk.github.io/mkdocs-material/"
+            target="_blank" rel="noopener"
+          >
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+
+      <!-- Social links -->
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/kelvintegelaar" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/KelvinTegelaar/CIPP" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="../js/timeago.min.js"></script>
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
+      
+    
+  </body>
+</html>
